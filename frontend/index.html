@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Synthetic MRI Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>🧠 MRI Dashboard</h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#upload">Upload MRI</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About MRI</a></li>
+    </ul>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <header class="topbar">
+      <div class="brand">Synthetic MRI Generator</div>
+      <div class="tagline">Light medical theme · Modern dashboard · Gallery</div>
+    </header>
+
+    <main class="container">
+      <!-- Upload Section -->
+      <section id="upload" class="card upload-card">
+        <h2>Upload MRI Image</h2>
+        <p class="muted">Choose a single image (JPG/PNG). We’ll generate a synthetic variant.</p>
+
+        <form id="upload-form">
+          <input id="mri_image" type="file" accept="image/*" required />
+          <button type="submit" class="btn primary">Generate Synthetic MRI</button>
+        </form>
+
+        <div id="status" class="status"></div>
+
+        <div id="preview" class="preview hidden">
+          <h3>Latest Result</h3>
+          <img id="preview-img" alt="Generated MRI" />
+          <a id="download-link" class="btn outline" download>Download Image</a>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section id="gallery" class="card">
+        <div class="card-header">
+          <h2>Gallery</h2>
+          <button id="refresh" class="btn">Refresh</button>
+        </div>
+        <div id="gallery" class="gallery"></div>
+      </section>
+
+      <!-- About MRI Section -->
+      <section id="about" class="card">
+        <h2>About Brain MRI</h2>
+        <p>
+          Magnetic Resonance Imaging (MRI) provides detailed images of the brain using magnetic fields and radio waves.
+        </p>
+        <ul>
+          <li><strong>T1-weighted MRI:</strong> Shows clear anatomical details.</li>
+          <li><strong>T2-weighted MRI:</strong> Highlights fluid and pathology.</li>
+          <li><strong>FLAIR MRI:</strong> Suppresses fluid signals to reveal lesions.</li>
+          <li><strong>Diffusion MRI:</strong> Used for stroke and white matter analysis.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>For demo use only · Not for clinical diagnosis</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

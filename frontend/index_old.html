@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Synthetic MRI Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🧠 Synthetic MRI Generator</div>
+    <div class="tagline">Light medical theme · Modern dashboard · Gallery</div>
+  </header>
+
+  <main class="container">
+    <section class="card upload-card">
+      <h2>Upload MRI Image</h2>
+      <p class="muted">Choose a single image (JPG/PNG). We’ll generate a synthetic variant.</p>
+
+      <form id="upload-form">
+        <input id="mri_image" type="file" accept="image/*" required />
+        <button type="submit" class="btn primary">Generate Synthetic MRI</button>
+      </form>
+
+      <div id="status" class="status"></div>
+
+      <div id="preview" class="preview hidden">
+        <h3>Latest Result</h3>
+        <img id="preview-img" alt="Generated MRI" />
+        <a id="download-link" class="btn outline" download>Download Image</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>Gallery</h2>
+        <button id="refresh" class="btn">Refresh</button>
+      </div>
+      <div id="gallery" class="gallery"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>For demo use only · Not for clinical diagnosis</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
